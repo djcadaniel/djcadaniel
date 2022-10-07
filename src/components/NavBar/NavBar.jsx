@@ -1,9 +1,13 @@
-import './NavBar.css';
-import IconLogo from '../../assets/img/icons/logo.svg';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import IconLogo from '../../assets/img/icons/logo.svg';
 import IconDownload from '../../assets/img/icons/download.svg';
+import {GiHamburgerMenu} from 'react-icons/gi';
+import './NavBar.css';
 
 export const NavBar = () => {
+
+  const [toggleMenu, setToggleMenu] = useState(false);
 
   const menu = [
     {
@@ -31,7 +35,9 @@ export const NavBar = () => {
   return (
     <header className="header">
       <nav className='nav content'>
-        <img src={IconLogo} alt="" />
+        <Link>
+          <img src={IconLogo} alt="" />
+        </Link>
         <ul className='nav__menu'>
           {
             menu.map((item, index)=>(
@@ -49,6 +55,9 @@ export const NavBar = () => {
             </a>
           </div>
         </ul>
+        <div className="nav__icon">
+          <p><GiHamburgerMenu /></p>
+        </div>
       </nav>
     </header>
   )
