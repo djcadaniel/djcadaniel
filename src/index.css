@@ -1,0 +1,56 @@
+:root{
+  --white-color: #fff;
+  --primary-color: #031851;
+  --secondary-color: #00FF82;
+  --blue-color: #0135B5;
+}
+
+@font-face{
+  font-family: 'cairo';
+  src: local('cairo'),url('./assets/fonts/cairo.ttf') format('truetype');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  font-family: cairo, verdana;
+  overflow-x: hidden;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+.content{
+  max-width: 1200px;
+  width: 90%;
+  min-width: 320px;
+  margin: 0 auto;
+}
+h1{
+  font-family: cairo, verdana;
+  font-size: 4rem;
+}
+h2{
+  font-family: cairo, verdana;
+  font-size: 3rem;
+}
+h3{
+  font-family: cairo, verdana;
+  font-size: 2rem;
+}
+p{
+  text-align: justify;
+}
