@@ -1,4 +1,5 @@
 .header{
+  position: relative;
   width: 100%;
   padding: 2rem 0;
   background-color: var(--primary-color);
@@ -50,6 +51,9 @@
   width: 1.5rem;
   margin-left: 1rem;
 }
+.nav__icon{
+  display: none;
+}
 .nav__icon p{
   display: flex;
   align-items: center;
@@ -58,4 +62,32 @@
   color: var(--secondary-color);  
 }
 @media only screen and (max-width: 768px){
+  .nav__menu{
+    position: absolute;
+    top: 10rem;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 10rem);
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;  
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    transition: left 1s ease-in-out;
+    border-radius: 0 0 20rem 0;
+  }
+  .nav__menu li{
+    font-size: 2rem;  
+  }
+  .nav__icon{
+    display: block;
+  }
+  .active{
+    left: 0%;
+  }
+  .react-icons{
+   background-color: red; 
+  }
 }

@@ -3,11 +3,16 @@ import { Link } from 'react-router-dom';
 import IconLogo from '../../assets/img/icons/logo.svg';
 import IconDownload from '../../assets/img/icons/download.svg';
 import {GiHamburgerMenu} from 'react-icons/gi';
+import {AiOutlineClose} from 'react-icons/ai';
 import './NavBar.css';
 
 export const NavBar = () => {
 
   const [toggleMenu, setToggleMenu] = useState(false);
+
+  const handleToogleMenu = () =>{
+    setToggleMenu(!toggleMenu);
+  }
 
   const menu = [
     {
@@ -38,11 +43,11 @@ export const NavBar = () => {
         <Link>
           <img src={IconLogo} alt="" />
         </Link>
-        <ul className='nav__menu'>
+        <ul className={(toggleMenu && 'active') + ' nav__menu' }>
           {
             menu.map((item, index)=>(
               <li key={index}>
-                <Link to={item.path}>
+                <Link onClick={handleToogleMenu} to={item.path}>
                   <span className='menu__number'>{item.id} </span>{item.title}
                 </Link>
               </li>
@@ -55,8 +60,8 @@ export const NavBar = () => {
             </a>
           </div>
         </ul>
-        <div className="nav__icon">
-          <p><GiHamburgerMenu /></p>
+        <div onClick={handleToogleMenu} className="nav__icon">
+          <p>{toggleMenu ? <AiOutlineClose/> : <GiHamburgerMenu /> }</p>
         </div>
       </nav>
     </header>
