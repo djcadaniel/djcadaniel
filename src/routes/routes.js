@@ -1,5 +1,5 @@
 import {MainLayout} from '../layout';
-import { About, Home } from '../pages';
+import { About, Home, Ability, Proyects, Contact } from '../pages';
 
 const routes = [
   {
@@ -8,9 +8,24 @@ const routes = [
     component: Home
   },
   {
-    path: 'about',
+    path: '/about',
     layout: MainLayout,
     component: About
+  },
+  {
+    path: '/habilidades',
+    layout: MainLayout,
+    component: Ability
+  },
+  {
+    path:'/proyectos',
+    layout: MainLayout,
+    component: Proyects
+  },
+  {
+    path:'/contactame',
+    layout: MainLayout,
+    component: Contact
   }
 ]
 

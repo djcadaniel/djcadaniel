@@ -22,17 +22,17 @@ export const NavBar = () => {
     },
     {
       id : '02.',
-      path: '/ability',
+      path: '/habilidades',
       title: 'Habilidades'
     },
     {
       id : '03.',
-      path: '/works',
+      path: '/proyectos',
       title: 'trabajos'
     },
     {
       id : '04.',
-      path: '/contact',
+      path: '/contactame',
       title: 'Contáctame'
     }
   ]

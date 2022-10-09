@@ -1,0 +1,32 @@
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  min-width: 320px;
+  padding: 5rem;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+.footer__networks{
+  display: flex;
+  justify-content: center;
+}
+.footer__networks li{
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+.footer__networks li{
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color .3s ease-in-out;
+}
+.footer__networks li:hover{
+  color: var(--secondary-color);
+}
+.footer p{
+  text-align: center;
+  letter-spacing: .5px;
+}
