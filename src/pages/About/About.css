@@ -1,0 +1,50 @@
+.about{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  min-height: 100vh;
+}
+.about__image{
+  display: flex;
+  width: 40%;
+  justify-content: center;
+}
+.about__image img{
+  width: 80%;
+  min-width: 230px;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about__description{
+  width: 60%;
+  padding: 0 10rem;
+  color: var(--white-color);
+}
+.about__description h2 small{
+  color: var(--secondary-color);
+}
+@media only screen and (max-width: 1024px){
+  .about__description{
+    padding: 0 5rem;
+  }
+}
+@media only screen and (max-width: 768px){
+  .about__description{
+    order: -1;
+    width: 100%;
+    padding: 0 5rem;
+  }
+  .about__image{
+    width: 100%;
+  }
+  .about__image img{
+    width: 38%;
+    min-width: 170px;
+  }
+}
+@media only screen and (max-width: 768px){
+  .about__description{
+    padding: 0 2rem;
+  }
+}

@@ -1,0 +1,30 @@
+.home__button{
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  width: 150px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 5px 5px 3px var(--blue-color);
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  transition: border .3s ease-in-out;
+  transition: color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
+}
+.home__button:hover{
+  border: 2px solid var(--secondary-color);
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+@media only screen and (max-width: 768px){
+  .home__button{
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 640px){
+  .home__button{
+    width: 40%;
+  }
+}

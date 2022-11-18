@@ -1,0 +1,27 @@
+.header__lado{
+  position: fixed;
+  left: 2rem;
+  bottom: 1rem;
+}
+.header__lado li{
+  font-size: 2rem;
+  color: var(--white-color);
+  cursor: pointer;
+  transition: color .5s ease-in-out;
+}
+.header__lado li:hover{
+  color: var(--secondary-color);
+}
+@media only screen and (max-width: 768px){
+  .header__lado{
+    position: fixed;
+    left: 1rem;
+    bottom: 10rem;
+  } 
+}
+@media only screen and (max-width: 640px){
+  .header__lado{
+    left: 0;
+    bottom: 10rem;
+  }
+}

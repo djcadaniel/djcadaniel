@@ -2,16 +2,23 @@
   position: relative;
   width: 100%;
   min-width: 320px;
-  padding: 2rem 0;
+  padding: 3rem 0;
   background-color: var(--primary-color);
 }
 .nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-right: 2rem;
 }
 .nav img{
   width: 5rem;
+}
+.nav__logo{
+  position: fixed;
+  top: 17px;
+  left: 2rem;
+  z-index: 999;
 }
 .nav__menu{
   display: flex;
@@ -20,8 +27,12 @@
   gap: 3rem;  
   color: var(--white-color);
 }
+.nav__menu li{
+  transition: color .5s ease-in-out;
+}
 .menu__number{
   color: var(--secondary-color);
+  transition: color .5s ease-in-out;
 }
 .nav__menu li:hover .menu__number{
   color: var(--white-color);
@@ -54,21 +65,31 @@
 }
 .nav__icon{
   display: none;
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  z-index: 998;
 }
 .nav__icon p{
   display: flex;
   align-items: center;
   font-size: 2.5rem;
   border-radius: 15px;
-  color: var(--secondary-color);  
+  color: var(--white-color);  
 }
 @media only screen and (max-width: 768px){
+  .header{
+    padding: 2rem 0;
+  }
+  .nav img{
+    width: 4rem;
+  }
   .nav__menu{
-    position: absolute;
-    top: 10rem;
+    position: fixed;
+    top:0;
     left: -100%;
     width: 100%;
-    height: calc(100vh - 10rem);
+    height: calc(100vh);
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -78,9 +99,16 @@
     background-color: var(--primary-color);
     transition: left 1s ease-in-out;
     border-radius: 0 0 20rem 0;
+    z-index: 997;
   }
   .nav__menu li{
     font-size: 2rem;  
+  }
+  .nav__menu--cv{
+    padding: .5rem 2rem;
+  }
+  .nav__menu--cv a img{
+    height: 3rem;
   }
   .nav__icon{
     display: block;
